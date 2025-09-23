@@ -7,10 +7,10 @@
     "build": "webpack",
     "setup-github-actions": "echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns",
     "test": "node test/browser.js",
-    "build-test": "yarn build && yarn test"
+    "build-test": "npm run build && npm test"
   },
   "devDependencies": {
-    "awesome-phonenumber": "workspace:^",
+    "awesome-phonenumber": "file:../",
     "html-webpack-plugin": "^5.6.3",
     "puppeteer": "^24.8.0",
     "webpack": "^5.99.7",
