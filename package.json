@@ -28,6 +28,7 @@
     "build:esm:rewrite": "ts-node scripts/rewrite-esm.ts",
     "build:esm": "npm run build:esm:build && npm run build:esm:rewrite",
     "build": "npm run build:libphonenumber && npm run build:rewrite && npm run build:esm",
+    "prepare": "npx tsc && npm run build:libphonenumber && npm run build:rewrite && npm run build:esm",
     "test:compile": "scripts/test.sh",
     "test": "npm run test:compile && NODE_OPTIONS=--experimental-vm-modules jest",
     "test-dist-webpack": "npm --prefix webpack run build-test",
